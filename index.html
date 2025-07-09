@@ -1,0 +1,579 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	/* Modal overlay */
+    .modal {
+      display: none;
+  	  position: fixed;
+  	  z-index: 1000;
+  	  left: 0; top: 0;
+  	  width: 100%; height: 100%;
+  	  overflow: auto;
+  	  background: rgba(0,0,0,0.8);
+  	  display: flex;
+  	  justify-content: center;
+  	  align-items: center;
+    }
+    .modal-content {
+      display: block;
+      width: 90vw;
+	  max-width: 1080px;
+	  height: auto;
+	  max-height: 1080px;
+ 	  margin: 5% auto;
+ 	  background: #fff;
+ 	  object-fit: contain;
+ 	  padding: 1rem;
+	  box-sizing: border-box;
+    }
+    .modal-close {
+      position: absolute;
+	  top: 20px;
+	  right: 20px;
+	  color: #000;
+	  font-size: 30px;
+	  font-weight: bold;
+	  cursor: pointer;
+	  z-index: 10;
+    }
+	.modal-content-wrapper {
+	  position: relative;
+      width: 90vw;
+  	  height: 1080px;
+  	  background: #fff;
+  	  margin: auto;
+  	  display: flex;
+  	  flex-direction: column;
+  	  align-items: center;
+  	  justify-content: center;
+ 	}
+    #menuCaption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      text-align: center;
+      color: #ddd;
+      padding: 10px 0;
+    }
+	
+    .modal {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     top: 0; left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.6);
+     z-index: 9999;
+    }
+
+    .modal-content {
+     width: 90vw;
+     max-width: 1080px;
+     max-height: 90vh;
+     background: #fff;
+     padding: 1rem;
+     box-sizing: border-box;
+     overflow-y: auto;
+     border-radius: 8px;
+     position: relative;
+    }
+
+    @media screen and (max-width: 600px) {
+     .modal-content {
+      width: 95vw;
+      height: auto;
+      padding: 1rem;
+    }
+    } 
+
+     .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  	</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>
+
+							<!-- Nav -->
+								<nav id="hamburgerMenu">
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>This is Phantom, a free, fully responsive site<br />
+								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+									    <img src="images/pic01.jpg" alt="">
+  									</span>
+  									<a href="javascript:void(0);"
+     								class="openMenu"
+     								data-title="그린엘리"
+     								data-address="서울 성동구 왕십리로14길 17 1층"
+     								data-gallery='["images/pic01-1.jpg", "images/pic01-2.jpg", "images/pic01-3.jpg", "images/pic01-4.jpg"]'
+     								data-map="https://naver.me/FoI6AC5v">
+    									<h2>그린엘리</h2>
+    									<div class="content">
+      										<p>푸짐한 전통 한정식의 묘미를 만나보세요!</p>
+    									</div>
+  									</a>
+								</article>
+								<article class="style3">
+  									<span class="image">
+    									<img src="images/pic03.jpg" alt="탐롱 썸네일" />
+  									</span>
+  									<a href="javascript:void(0);" class="openMenu"
+     								data-title="탐롱"
+     								data-address="서울 성동구 왕십리로14길 21"
+     								data-gallery='["images/pic03-1.jpg", "images/pic03-2.jpg", "images/pic03-3.jpg", "images/pic03-4.jpg"]'
+     								data-map="https://naver.me/탐롱주소">
+    									<h2>탐롱</h2>
+    									<div class="content">
+      										<p>따뜻한 커피와 샌드위치가 있는 공간</p>
+    									</div>
+  									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<a href="javascript:void(0);" class="openMenu"
+									data-title="성수찰순대국"
+									data-address="서울 성동구 왕십리로14길 21"
+									data-gallery='["images/pic03-1.jpg", "images/pic03-2.jpg", "images/pic03-3.jpg", "images/pic03-4.jpg"]'
+									data-map="https://naver.me/탐롱주소">
+										<h2>성수찰순대국</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic05.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>성수부대찌개</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>훼미리손칼국수보쌈</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic07.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>진작다이닝</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic08.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>왕짜장</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic09.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>햄찌와베찌</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>풍년정육점식당</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic11.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>미락바지락칼국수</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic12.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>평이담백뼈칼국수</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic16.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>시치미</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic17.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>호타루</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic18.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>성수AGU</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic19.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>더킹돈</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic20.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>뚝섬우동김밥</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic21.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>하이츠김밥</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic22.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>은사즉석떡볶이</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic23.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>목목</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic24.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>멘토부</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic25.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>함냉면옥</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic26.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>우일뭉티기</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic27.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>성수대파</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+		<!-- Modal HTML 구조 추가 -->
+			<div id="menuModal" class="modal" style="display: none;">
+  			<div class="modal-content-wrapper">
+    		<span class="modal-close">&times;</span>
+    		<div id="menuCaption">
+			  <h2>그린엘리</h2>
+			  <p>주소: 서울 성동구 왕십리로14길 17 1층</p>
+
+			  <div class="modal-gallery">
+			    <img class="zoomable" src="images/pic01-1.jpg" alt="그린엘리 이미지 1" />
+			    <img class="zoomable" src="images/pic01-2.jpg" alt="그린엘리 이미지 2" />
+			    <img class="zoomable" src="images/pic01-3.jpg" alt="그린엘리 이미지 3" />
+			    <img class="zoomable" src="images/pic01-4.jpg" alt="그린엘리 이미지 4" />
+			  </div>
+			  <p class="img-tip">※ 이미지를 클릭하면 크게 볼 수 있어요</p>
+				<div id="imgZoomModal" class="img-zoom-modal">
+				  <span class="img-zoom-close">&times;</span>
+				  <img id="imgZoomTarget" src="" alt="확대 이미지" />
+				</div>
+			  <!-- 지도 영역 -->
+			  <div class="modal-map">
+			  <!-- PC 전용: iframe 지도 --> 
+			   <div class="map-desktop">
+  			    <iframe
+  			     src="https://map.naver.com/v5/entry/place/1602930741?c=14128535.2793812,4510422.9739181,17,0,0,0,dh"
+  			     width="100%"
+				 height="300"
+				 frameborder="0"
+  			     allowfullscreen
+  			     loading="lazy">
+  			    </iframe>
+			   </div>
+			  <!-- 모바일 전용: 지도 썸네일 + 지도 보기 버튼 -->
+  			   <div class="map-mobile">
+                <img src="https://map2.daumcdn.net/map_2d_staticmap/mapservice?IW=700&IH=300&MX=127.041436&MY=37.564564&zoom=3" 
+                     alt="그린엘리 지도" 
+                     style="width: 100%; height: auto;">
+                <p style="text-align: center; margin-top: 0.5rem;">
+                <a href="h1ttps://naver.me/FoI6AC5v" target="_blank" 
+                   style="text-decoration: none; font-weight: bold;">🗺 네이버 지도로 보기</a>
+                </p>
+               </div>
+  			  </div>
+			</div>
+  			</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>  
+  			<script src="assets/js/browser.min.js"></script>  
+  			<script src="assets/js/breakpoints.min.js"></script>  
+  			<script src="assets/js/util.js"></script>  
+  			<script src="assets/js/main.js"></script>
+
+ 		 <!-- Modal 스크립트 추가 -->
+  			<script>
+   			  (function() {
+    const modal = document.getElementById('menuModal');
+    const modalImg = document.getElementById('menuModalImg');
+    const caption = document.getElementById('menuCaption');
+    const closeBtn = modal.querySelector('.modal-close');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+
+    document.querySelectorAll('.openMenu').forEach(el => {
+      el.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modalImg.src = el.dataset.menu;
+        //caption.textContent = el.dataset.title;
+        if (hamburgerMenu) hamburgerMenu.style.display = 'none'; // 햄버거 숨기기
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      if (hamburgerMenu) hamburgerMenu.style.display = ''; // 다시 보이게
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        if (hamburgerMenu) hamburgerMenu.style.display = '';
+      }
+    });
+  })();
+  			</script>
+			<script>
+      const zoomModal = document.getElementById("imgZoomModal");
+      const zoomTarget = document.getElementById("imgZoomTarget");
+      const zoomClose = document.querySelector(".img-zoom-close");
+
+      document.querySelectorAll(".zoomable").forEach(img => {
+        img.addEventListener("click", () => {
+          zoomTarget.src = img.src;
+          zoomModal.style.display = "flex";
+        });
+      });
+
+      zoomClose.addEventListener("click", () => {
+        zoomModal.style.display = "none";
+      });
+
+      zoomModal.addEventListener("click", e => {
+        if (e.target === zoomModal) zoomModal.style.display = "none";
+      });
+    		</script>
+	</body>
+</html>
