@@ -3719,3 +3719,15 @@ input, select, textarea {
   .map-desktop { display: none; }
   .map-mobile { display: block; }
 }
+
+#menuCaption h2 {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333 !important;
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  word-break: keep-all;
+  white-space: normal; /* ✅ 줄바꿈 허용 */
+}
