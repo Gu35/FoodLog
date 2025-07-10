@@ -3731,3 +3731,14 @@ input, select, textarea {
   word-break: keep-all;
   white-space: normal; /* ✅ 줄바꿈 허용 */
 }
+
+@media screen and (max-width: 768px) {
+  #menuCaption h2 {
+    font-size: 1.1rem;
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    text-align: center;
+  }
+}
+
