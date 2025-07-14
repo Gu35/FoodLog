@@ -3340,6 +3340,14 @@ input, select, textarea {
 	  color: #666 !important;
 	}
 
+	.modal-content-wrapper #menuCaption h2 {
+  	  font-size: 32px !important;
+  	  margin-bottom: 20px !important;
+	}
+	.modal-content-wrapper #menuCaption p {
+  	  margin-top: 8px !important;
+	}
+
 	#menuCaption strong {
 	  color: #333333 !important;
 	}
@@ -3741,4 +3749,3 @@ input, select, textarea {
     text-align: center;
   }
 }
-
