@@ -183,16 +183,21 @@
 			});
 
 })(jQuery);
-		document.querySelectorAll('.openMenu').forEach(el => {
+
+// 메뉴 열기 + 데이터 삽입 + 이미지 확대 기능
+document.querySelectorAll('.openMenu').forEach(el => {
   el.addEventListener('click', () => {
     const title = el.dataset.title;
     const address = el.dataset.address;
     const gallery = JSON.parse(el.dataset.gallery);
     const mapUrl = el.dataset.map;
 
-    // 텍스트 업데이트
-    document.querySelector('#menuCaption h2').textContent = title;
-    document.querySelector('#menuCaption p').textContent = '주소: ' + address;
+    // 제목 & 주소 업데이트
+    const titleEl = document.querySelector('#menuCaption h2');
+    if (titleEl) titleEl.textContent = title;
+
+    const addressEl = document.querySelector('#menuCaption p');
+    if (addressEl) addressEl.textContent = '주소: ' + address;
 
     // 이미지 갤러리 업데이트
     const galleryDiv = document.querySelector('.modal-gallery');
@@ -204,15 +209,20 @@
       img.alt = `${title} 이미지 ${i + 1}`;
       galleryDiv.appendChild(img);
     });
-	// ✅ 이미지 확대 기능 다시 연결
-	bindZoomToImages();
+
     // 지도 업데이트
-    document.querySelector('.modal-map iframe').src = mapUrl;
+    const mapIframe = document.querySelector('.modal-map iframe');
+    if (mapIframe) mapIframe.src = mapUrl;
 
     // 모달 열기
     document.getElementById('menuModal').style.display = 'block';
+
+    // ✅ 이미지 확대 이벤트 다시 연결
+    bindZoomToImages();
   });
 });
+
+// ✅ 이미지 확대 기능
 function bindZoomToImages() {
   document.querySelectorAll('.zoomable').forEach(img => {
     img.onclick = () => {
@@ -231,3 +241,29 @@ function bindZoomToImages() {
     };
   }
 }
+
+// ✅ DOM 로드 후 확대 기능 준비
+document.addEventListener('DOMContentLoaded', bindZoomToImages);
+
+
+// ✅ 이미지 확대 기능
+function bindZoomToImages() {
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.onclick = () => {
+      const zoomModal = document.getElementById('imgZoomModal');
+      const zoomTarget = document.getElementById('imgZoomTarget');
+      zoomTarget.src = img.src;
+      zoomModal.style.display = 'block';
+    };
+  });
+
+  // 닫기 버튼 이벤트
+  const closeBtn = document.querySelector('.img-zoom-close');
+  if (closeBtn) {
+    closeBtn.onclick = () => {
+      document.getElementById('imgZoomModal').style.display = 'none';
+    };
+  }
+}
+  // ✅ 이 줄 추가!
+bindZoomToImages();
