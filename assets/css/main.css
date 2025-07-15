@@ -3428,7 +3428,7 @@ input, select, textarea {
 }
 
 
-}
+
 
 /* ===================================== */
 /* 📱 Responsive: Modal & Image Sections */
@@ -3748,4 +3748,52 @@ input, select, textarea {
     overflow: visible;
     text-align: center;
   }
+}
+#mobileShopTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+#menuCaption {
+  display: block !important;
+  text-align: center;
+  padding: 10px 0;
+  background: #fff; /* 필요시 */
+  z-index: 1000;
+}
+
+#menuCaption h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#menuCaption p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 모바일에서도 강제 표시 */
+@media screen and (max-width: 768px) {
+  #menuCaption {
+    display: block !important;
+    position: relative;  /* ✅ 겹침 방지 */
+    z-index: 1000;
+  }
+}
+/* ✅ 추가: 모바일에서 제목이 잘리지 않도록 */
+@media screen and (max-width: 480px) {
+    .modal-content-wrapper {
+        padding: 0.8rem !important;
+    }
+
+    #menuCaption h2 {
+        font-size: 1.2rem !important;
+        white-space: normal;
+        overflow: visible;
+        word-break: keep-all;
+        margin-top: 12px; /* ✅ 여백 추가 */
+        text-align: center; /* ✅ 중앙 정렬 */
+    }
 }
