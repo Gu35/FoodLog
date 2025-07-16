@@ -3797,3 +3797,14 @@ input, select, textarea {
         text-align: center; /* ✅ 중앙 정렬 */
     }
 }
+/* 기본 상태: 모바일 지도 숨김 */
+.map-mobile {
+  display: none;
+}
+
+/* 화면 폭이 768px 이하일 때(모바일) 모바일 지도 보이기 */
+@media (max-width: 768px) {
+  .map-mobile {
+    display: block;
+  }
+}
