@@ -3808,3 +3808,19 @@ input, select, textarea {
     display: block;
   }
 }
+/* 푸터 첫 번째 섹션 왼쪽 여백 */
+#footer .inner section:first-child {
+    padding-left: 20px; /* 필요하면 30px로 늘려도 됨 */
+}
+
+/* 설명 글씨 크기 줄이기 */
+#footer .inner section:first-child p {
+    font-size: 0.8em; /* 반 사이즈로 줄이려면 0.5em */
+    line-height: 1.5;
+}
+
+/* 저작권 부분 왼쪽 여백 */
+#footer .inner .copyright {
+    padding-left: 20px; /* 첫 섹션과 동일하게 */
+    text-align: left;   /* 혹시 기본이 중앙이면 왼쪽 정렬 */
+}
