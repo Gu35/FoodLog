@@ -211,6 +211,11 @@
             const mapIframe = document.querySelector('.modal-map iframe');
             if (mapIframe) mapIframe.src = mapUrl;
 
+            // 모바일 지도 업데이트
+            const mapMobileLink = document.querySelector('.map-mobile a');
+            if (mapMobileLink) mapMobileLink.href = mapUrl;
+
+
             // 모달 열기
             const modal = document.getElementById('menuModal');
             modal.style.display = 'block';
