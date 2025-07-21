@@ -3824,3 +3824,18 @@ input, select, textarea {
     padding-left: 20px; /* 첫 섹션과 동일하게 */
     text-align: left;   /* 혹시 기본이 중앙이면 왼쪽 정렬 */
 }
+
+/* 모바일 전용 (최대 736px 기준) */
+@media screen and (max-width: 736px) {
+    /* Contact 영역 */
+    #footer .inner section {
+        padding-left: 20px; /* CONTACT 섹션 왼쪽 띄우기 */
+        text-align: left; /* 혹시 중앙 정렬일 경우 */
+    }
+
+    /* 저작권 영역 */
+    #footer .inner .copyright {
+        padding-left: 20px; /* 동일 여백 */
+        text-align: left;   /* 중앙에서 왼쪽으로 */
+    }
+}
