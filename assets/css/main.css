@@ -3853,3 +3853,18 @@ input, select, textarea {
         display: none;
     }
 }
+
+/* 모바일 화면에서 이미지 오버레이 제거 + 이미지 강제 보이기 */
+@media screen and (max-width: 736px) {
+  .tiles article > .image:after {
+    display: none !important; /* 오버레이 숨기기 */
+  }
+  .tiles article .image img {
+    display: block !important; /* 혹시 숨겨져 있으면 보이게 */
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important; /* 투명도 초기화 */
+    z-index: 1 !important;
+    position: relative !important; /* 오버레이 뒤로 안 깔리게 */
+  }
+}
