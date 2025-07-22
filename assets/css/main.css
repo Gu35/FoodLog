@@ -3868,3 +3868,25 @@ input, select, textarea {
     position: relative !important; /* 오버레이 뒤로 안 깔리게 */
   }
 }
+
+@media screen and (max-width: 736px) {
+  .tiles article .image {
+    background: none !important;
+  }
+
+  .tiles article .image img {
+    display: block !important;
+    opacity: 1 !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    z-index: 10 !important;
+  }
+
+  .tiles article > .image:before,
+  .tiles article > .image:after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
