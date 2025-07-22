@@ -3890,3 +3890,19 @@ input, select, textarea {
   }
 }
 
+/* ✅ 모바일에서 이미지 강제 표시 */
+@media screen and (max-width: 736px) {
+  .tiles article .image img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* 배경 오버레이가 이미지를 덮는 경우 제거 */
+  .tiles article .image:after {
+    display: none !important;
+  }
+}
+
