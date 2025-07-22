@@ -3839,3 +3839,17 @@ input, select, textarea {
         text-align: left;   /* 중앙에서 왼쪽으로 */
     }
 }
+
+/* 이미지 강제 표시 및 오버레이 제거 */
+.tiles article .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 모바일에서 오버레이 제거 */
+@media screen and (max-width: 736px) {
+    .tiles article > .image:after {
+        display: none;
+    }
+}
