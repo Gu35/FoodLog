@@ -3847,10 +3847,5 @@ input, select, textarea {
     height: auto;
 }
 
-/* 모바일에서 오버레이 제거 */
-@media screen and (max-width: 736px) {
-    .tiles article > .image:after {
-        display: none;
-    }
-}
+
 
