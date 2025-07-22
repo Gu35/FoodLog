@@ -3847,5 +3847,6 @@ input, select, textarea {
     height: auto;
 }
 
-
-
+.tiles article > .image:after {
+    display: block !important;
+}
