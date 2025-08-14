@@ -3850,3 +3850,10 @@ input, select, textarea {
 .tiles article > .image:after {
     display: block !important;
 }
+
+.visit-status {
+    display: block;
+    font-size: 0.85em; /* p보다 약간 작게 */
+    color: #999;       /* 회색 톤 */
+    margin-bottom: 4px;
+}
