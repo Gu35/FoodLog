@@ -2722,7 +2722,11 @@ input, select, textarea {
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #00000086;
+				backdrop-filter: blur(2px);
+				background: rgba(0,0,0,0.12);
+			}
+			.tiles article .label {
+  				background: rgba(0,0,0,0.55); /* 띠만 진하게 */
 			}
 
 			.tiles article.style6 > .image:before {
