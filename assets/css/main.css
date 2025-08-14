@@ -3854,6 +3854,6 @@ input, select, textarea {
 .visit-status {
     display: block;
     font-size: 0.75em; /* p보다 훨씬 작게 */
-    color: #999;       /* 회색 톤 */
+    color: #e4e4e4;       /* 회색 톤 */
     margin-bottom: 4px;
 }
